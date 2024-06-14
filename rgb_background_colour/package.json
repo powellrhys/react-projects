@@ -1,5 +1,5 @@
 {
-  "name": "background_colour",
+  "name": "rgb_background_colour",
   "private": true,
   "version": "0.0.0",
   "type": "module",
