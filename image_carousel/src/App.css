@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+    font-family: 'Verdana'
+  }
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    padding: 20px;
+    align-items: center;
+}
+
+button {
+    margin: 0 20px;
+    width: 100px;
+}
+
+img {
+    width: 500px;
+    height: 350px;
+}
