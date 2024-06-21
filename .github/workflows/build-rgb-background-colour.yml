@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Build image: ${{ github.repository }}"
-        working-directory: 'rgb_background_colour'
+        working-directory: './rgb_background_colour'
         run: docker build -f rgb_background_colour/Dockerfile -t $REGISTRY/$IMAGE_NAME .
 
       - name: Push ${{ github.repository }} to GitHub container registry
