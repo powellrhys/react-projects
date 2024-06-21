@@ -1,4 +1,4 @@
-name: Build & Push RGB Background Colour App
+name: RGB Background Colour App
 
 on:
   workflow_dispatch:
