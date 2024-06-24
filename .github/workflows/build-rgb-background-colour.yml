@@ -46,7 +46,7 @@ jobs:
         working-directory: './rgb_background_colour'
         run: docker build -f Dockerfile -t $REGISTRY/$IMAGE_NAME .
 
-      - name: Push $IMAGE_NAME to GitHub container registry
+      - name: Push Container to GitHub container registry
         run: |
           docker images
           docker push $REGISTRY/$IMAGE_NAME:latest
@@ -58,7 +58,7 @@ jobs:
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
-      - name: Push ${{ github.repository }} to DockerHub Container registry
+      - name: Push Container to DockerHub Container registry
         run: |
           docker tag $REGISTRY/$IMAGE_NAME:latest $IMAGE_NAME:latest
           docker push $IMAGE_NAME
