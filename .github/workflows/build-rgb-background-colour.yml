@@ -47,8 +47,7 @@ jobs:
         run: docker build -f Dockerfile -t $REGISTRY/$IMAGE_NAME .
 
       - name: Push Container to GitHub container registry
-        run: |
-          docker images
+        run: | 
           docker push $REGISTRY/$IMAGE_NAME:latest
 
       - name: DockerHub Login
