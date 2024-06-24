@@ -48,6 +48,7 @@ jobs:
 
       - name: Push $IMAGE_NAME to GitHub container registry
         run: |
+          docker images
           docker push $REGISTRY/$IMAGE_NAME:latest
 
       - name: DockerHub Login
