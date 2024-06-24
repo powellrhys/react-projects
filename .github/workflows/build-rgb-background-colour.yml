@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: react-projects-rgb-background-colour
+  IMAGE_NAME: powellrhys/react-projects-rgb-background-colour
 
 jobs:
   build-and-push-image:
@@ -49,7 +49,7 @@ jobs:
       - name: Push $IMAGE_NAME to GitHub container registry
         run: |
           docker images
-          docker push ghcr.io/react-projects-rgb-background-colour:latest
+          docker push $REGISTRY/$IMAGE_NAME:latest
 
       - name: DockerHub Login
         env:
