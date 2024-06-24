@@ -49,7 +49,7 @@ jobs:
       - name: Push $IMAGE_NAME to GitHub container registry
         run: |
           docker images
-          docker push $REGISTRY/$IMAGE_NAME:latest
+          docker push ghcr.io/react-projects-rgb-background-colour:latest
 
       - name: DockerHub Login
         env:
